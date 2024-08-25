@@ -1,0 +1,216 @@
+﻿*{
+    box-sizing:border-box; /*el margin y el padding sean iguales para toda la web*/
+    }
+ body{
+    margin:0;/*le quitamos el margen entre los elementos del cuerpo de la web*/
+    overflow-x:hidden; /*para quitarles el escrobal horizontal el tamaño de pantalla*/
+    }
+
+.contenedor{
+width:80%;
+max-width:1000px;
+margin:0 auto;
+overflow:hidden;
+}
+
+
+.header{
+    height: 100vh;/*tamaño de pantalla*/ 
+    display:flex;/*colocamos la pantalla flexible*/
+    align-items:center;/*centramos todos lols items */
+    color:#fff;/*le damos color  al encabezado*/ 
+    }
+.content{
+    max-width:40rem;/*maximo ancho*/
+    padding-left:1rem;/*espaciado a la izquierda*/
+    padding-right:1rem;/*espaciado a la derecha*/
+    margin:auto;/*para que el contenido se centre automatico*/
+    text-align:center;
+    }
+.header-video{
+    position:absolute;/*la posicion principal*/
+    top:0;
+    left:0;
+    width:100%;
+    height:86vh;
+    overflow:hidden;/*le quitamos la barra de dsplazar*/
+    }
+.header-video video{
+    min-width:100%;
+    min-height:100%;
+    }
+.header-overlay{
+    height:100vh;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background:#63c6d3;
+    z-index:1;
+    opacity: 0.5;
+    }
+.header-content{
+    z-index:2;
+    }
+.header-content h1{
+    font-size:50px;
+    color: rgb(58, 12, 12);
+    
+    z-index:2;
+    font-family:jokerman;
+    border-style:outset;/*estilizamos el titulo*/
+    }
+.header-content p{
+    color: black;
+    font-size:1.5rem;
+    display:block;
+    
+    }
+.boton{
+    background:yellow;
+    font-size:1.2rem;
+    padding:1rem 2rem;
+    text-decoration:none;
+    border-radius: 50%;
+    border: thick solid black;/*color a los bordes del boton*/
+    box-shadow: 12px 12px 15px #000;/*sombras a el boton*/
+    
+    }
+ /*producimos un acercamineto de los link*/
+a:hover,a:focus{
+        border: thick solid rgb(218, 175, 175);
+        color:rgb(4, 5, 1);
+        background:white;
+        -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+        -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+        box-shadow:10px 10px 7px rgba(0,0,0,.7);
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        -o-transform: scale(1.25);
+    }
+
+nav{
+    padding-top:1px;
+    position:fixed;
+    z-index: 4;
+    float:right;
+    margin-right:15px;
+    /*margin-top:13px;
+    margin-left:43px;*/
+    width:30%;
+    height:15px;
+    border-radius:50%;
+    }
+nav ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    }
+nav ul li{
+    border-radius: 20%;
+    background-color: rgb(207, 99, 157);
+    display:inline-block;
+    line-height:20px;
+    border-style:inset;
+    } 
+nav ul li a {
+    display:block;
+    padding: 2px 5px;
+    text-decoration:none;
+    cursor:url("perro.png"), auto;
+    }
+
+#logo{
+        padding-top: 20px;
+        padding-left: 55px;
+        position:fixed;
+        z-index:3;
+    }
+.informativo
+{
+    padding:0 3rem 0 3rem;
+    margin: auto;
+    top:10px ;
+    width: 90vw;
+    border-radius: 50%;
+    z-index: 3;
+    position:relative;/*la posicion principal*/
+    left:60px;
+    overflow:hidden;
+    
+}
+.informativo p {
+    text-align: left;
+    width: 3500px;    
+    line-height: 1.2;/*ancho de la linea de texto*/ 
+    color: #000;
+
+    animation-duration:60s;
+    animation-name:parrafo;
+    animation-iteration-count:infinite;/*lo repetimos infinito*/
+    animation-direction:normal;/*lo movemos adelante y atras*/
+    /*animation-fill-mode: both;
+    animation-delay: 2s;*/
+    animation-timing-function: linear;
+}
+.informativo p:hover{
+    animation-play-state: paused;/*pasamos el raton por ensima y se pausa*/
+    }
+
+@keyframes parrafo {
+0% {margin-left:1000px;}
+100%{margin-left: -4000px;}
+}
+
+.main{
+    text-align: center;
+    border-style:Groove;
+    width:70%;
+    
+    padding:0 1rem 0 1rem;
+    float:left;/*colocamos esta seccion en la izquierda con 70%*/
+    }
+section img{
+            padding:0;
+            margin:0;
+            width: 100%;
+    }
+        
+aside{
+    width:30%;
+    padding:20px;
+    box-sizing:border-box;
+    float:left;
+    border-style:inset;
+    border-width:30px;
+    }
+.enlaces img{
+    width: 20%;
+    }
+        
+footer{
+    text-align:center;
+    clear:both;
+    float:left;
+    
+    box-sizing:border-box;
+    width:100%;
+    height:auto;
+    padding:20px;
+    color:black;
+    background:rgb(128, 111, 111);
+    border-style:outset;
+    border-width:12px;
+    }
+
+
+    /*lo estilizamos cuando para los celulares*/
+   @media screen and (max-width:800px){
+
+.main{width:100%;}
+aside{width:100%;}
+}
+@media screen and (max-width:400px){
+.contenedor{width:100%;}
+}
+
